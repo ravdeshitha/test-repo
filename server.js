@@ -7,7 +7,7 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
-const port = 33061;
+const port = 3306;
 
 
 //main routes paths
