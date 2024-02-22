@@ -26,7 +26,7 @@ router.post("/register", (req,res) =>{
     if(password === confirmPassword){
         bcrypt.hash(password, 10, (err, hashPassword) => {
             if(err){
-                res.send({"bcrypt error});//password bcrypt has an error
+                res.send("bcrypt error");//password bcrypt has an error
             }
             else{
                 db.query(
