@@ -5,7 +5,7 @@ const db = mysql.createConnection({
     host: "sql310.infinityfree.com",
     user: "if0_36026768",
     password: "Wasanabakers1",
-    database: "if0_36026768_XXX"
+    database: "if0_36026768_wasana_company"
 });
 
 db.connect((err) =>{
