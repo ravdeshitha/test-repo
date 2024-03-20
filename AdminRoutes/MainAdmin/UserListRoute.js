@@ -17,4 +17,21 @@ router.get('/userList', (req, res) =>{
     )
 });
 
+router.delete('/userList/:id', (req, res) =>{
+    const userId = req.params.id;
+
+    db.query(
+        "DELETE FROM users WHERE userId =?",
+        userId,
+        (err, result)=>{
+            if(err){
+                res.send({message:'delete unsuccess', error: err});
+            }
+            else{
+                res.send({message: "delete success"});
+            }
+        }
+    )
+})
+
 module.exports = router;
